@@ -1,0 +1,35 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+default:
+    path: /
+    defaults: { _controller: AppBundle:Default:index}
+
+home:
+    path: /home
+    defaults: { _controller: AppBundle:Default:content}
+
+werdegang:
+    path: /werdegang
+    defaults: { _controller: AppBundle:Default:content}
+
+kenntnisse:
+    path: /kenntnisse
+    defaults: { _controller: AppBundle:Default:content}
+
+motivation:
+    path: /motivation
+    defaults: { _controller: AppBundle:Default:content}
+
+projects:
+    path: /projekte
+    defaults: { _controller: AppBundle:Default:content}
+
+impressum:
+    path: /impressum
+    defaults: { _controller: AppBundle:Default:content}
+    
+createText:
+    path: /create
+    defaults: { _controller: AppBundle:Default:create}

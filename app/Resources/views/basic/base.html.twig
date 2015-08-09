@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Online Vita - Thomas Leven{% endblock %}</title>
+        
+		{% stylesheets 'bundles/app/css/base/*' filter='cssrewrite' %}
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
+		
+		{% stylesheets 'bundles/app/css/components/*' filter='cssrewrite' %}
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
+		
+		{% stylesheets 'bundles/app/css/modules/*' filter='cssrewrite' %}
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
+		
+		{% javascripts 'bundles/app/js/*' %}
+			<script src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+		
+    </head>
+    <body>
+	
+		{% block header %}
+			{% include 'basic/header.html.twig' %}
+		{% endblock %}
+		
+		{% block contentContainer %}
+		<main>
+			<div id="container">	
+				{% block content %}
+					
+				{% endblock %}
+			</div>
+		</main>
+		{% endblock %}
+		
+		{% block footer %}
+			{% include 'basic/footer.html.twig' %}
+		{% endblock %}
+		
+    </body>
+</html>
